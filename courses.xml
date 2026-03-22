@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 1. Create an XML file to store website data (courses) -->
+<courses>
+    <!-- Course 1 -->
+    <course>
+        <title>Introduction to HTML</title>
+        <instructor>Prof. Venkata Narayana</instructor>
+        <price>2000</price>
+        <ratings>4.5</ratings>
+    </course>
+
+    <!-- Course 2 -->
+    <course>
+        <title>Advanced JavaScript</title>
+        <instructor>Prof. Mahesh</instructor>
+        <price>4000</price>
+        <ratings>4.8</ratings>
+    </course>
+
+    <!-- Course 3 -->
+    <course>
+        <title>Web Development Bootcamp</title>
+        <instructor>Prof. Swathi</instructor>
+        <price>6000</price>
+        <ratings>4.9</ratings>
+    </course>
+</courses>

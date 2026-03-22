@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Basic Course Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#courses">Courses</a></li>
+            <li><a href="#course-details">Course Details</a></li>
+            <li><a href="#register">Register / Login</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="home">
+        <h1>Welcome to Our Learning Platform</h1>
+        <p>This is a website introduction. We offer the best courses for you to learn and grow your skills.</p>
+        <img src="banner.jpg" alt="Website Banner Image" width="500">
+    </section>
+
+    <hr>
+
+    <section id="courses">
+        <h2>Courses</h2>
+        <ul>
+            <li>
+                <h3>Course Title: Introduction to HTML</h3>
+                <p>Instructor Name: Prof. Venkata Narayana</p>
+                <p>Price: 2000 Rupees </p>
+                <p>Ratings: 4.5 / 5</p>
+            </li>
+            <li>
+                <h3>Course Title: Advanced JavaScript</h3>
+                <p>Instructor Name: Prof. Mahesh</p>
+                <p>Price: 4000 Rupees</p>
+                <p>Ratings: 4.8 / 5</p>
+            </li>
+            <li>
+                <h3>Course Title: Web Development Bootcamp</h3>
+                <p>Instructor Name: Prof. Swathi</p>
+                <p>Price: 6000 Rupees</p>
+                <p>Ratings: 4.9 / 5</p>
+            </li>
+        </ul>
+    </section>
+
+    <hr>
+
+    <section id="course-details">
+        <h2>Course Details: Introduction to HTML</h2>
+        <p><strong>Course description:</strong> In this course, you will learn the basics of HTML to build static web pages.</p>
+        <p><strong>Instructor details:</strong> Prof. Swathi has 10 years of experience in web development.</p> 
+        <p><strong>Course curriculum:</strong></p>
+        <ol>
+            <li>Introduction to Web</li>
+            <li>HTML Tags</li>
+            <li>Forms and Inputs</li>
+        </ol>
+        <p><strong>Duration:</strong> 4 weeks</p>
+        <button type="button">Enroll</button>
+    </section>
+
+    <hr>
+
+    <section id="register">
+        <h2>Register / Login</h2>
+        <form id="registrationForm" onsubmit="return validateForm()">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name"><br><br>
+
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email"><br><br>
+
+            <label for="password">Password:</label><br>
+            <input type="password" id="password" name="password"><br><br>
+
+            <label for="confirmPassword">Confirm Password:</label><br>
+            <input type="password" id="confirmPassword" name="confirmPassword"><br><br>
+
+            <input type="submit" value="Submit">
+        </form>
+
+        <script>
+            function validateForm() {
+                var name = document.getElementById("name").value;
+                var email = document.getElementById("email").value;
+                var password = document.getElementById("password").value;
+                var confirmPassword = document.getElementById("confirmPassword").value;
+
+                if (name == "") {
+                    alert("Name must be filled out");
+                    return false;
+                }
+                if (email == "") {
+                    alert("Email must be filled out");
+                    return false;
+                }
+                if (password == "") {
+                    alert("Password must be filled out");
+                    return false;
+                }
+                if (password != confirmPassword) {
+                    alert("Passwords do not match");
+                    return false;
+                }
+                
+                alert("Form submitted successfully!");
+                return true;
+            }
+        </script>
+    </section>
+
+    <hr>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p><strong>Address:</strong> CBIT, gandipet, Hyderabad, Telangana</p>
+        <p><strong>Email:</strong> proffesor@gmail.com</p>
+        <p><strong>Phone:</strong> +91 1234567890</p>
+
+        <h3>Inquiry Form</h3>
+        <form action="#">
+            <label for="contactName">Name:</label><br>
+            <input type="text" id="contactName" name="contactName"><br><br>
+            
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" rows="4" cols="50"></textarea><br><br>
+            
+            <input type="submit" value="Send Inquiry">
+        </form>
+    </section>
+
+</body>
+</html>
